@@ -1,1 +1,19 @@
-<h1>Hello Waldo</h1>
+<div>
+  <%= form_tag(repositories_path, method: "get") do %>
+    <%= label_tag(:query, "Search Github Repositories") %>
+    <%= text_field_tag(:query, @query) %>
+    <%= submit_tag("Go!") %>
+  <% end %>
+</div>
+
+
+<% if @repos.present? %>
+  <% @repos.each do |repo| %>
+    <%= render partial: "repo", locals: { repo: repo } %>
+    <hr />
+  <% end %>
+<% elsif @error.present? %>
+  <h1><%= @error %></h1>
+<% else %>
+  <h1>Here be dragons</h1>
+<% end %>
