@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GitReader is a barebones proof of concept rails application that uses dry-rails to fetch some repositories from github.
 
-Things you may want to cover:
+# Requirements
+* Ruby 2.7.6
 
-* Ruby version
+# Setup
+* `bundle install`
+* `rails s`
 
-* System dependencies
+# Testing
+* `bundle exec rspec`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# TODO
+* add caching
+* dockerize
+* improve UI
