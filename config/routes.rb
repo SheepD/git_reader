@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'repositories#index'
+
+  resources :repositories, only: %i[index]
+
+  get '*all', to: 'application#not_found'
 end
